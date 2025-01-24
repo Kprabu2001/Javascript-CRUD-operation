@@ -1,0 +1,140 @@
+body{
+    background: url(2.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+table {
+    border: 8px double;
+    border-color: rgb(0, 0, 0);
+    width: 80%;
+    margin: 39px auto;
+    background: rgb(241, 192, 126);
+    position: relative;
+}
+
+@property --angle{
+    syntax:"<angle>";
+    initial-value: 0deg;
+    inherits: false;
+}
+.card::after,.card::before{
+    content: "";
+    margin: 55px auto;
+    position: absolute;
+    width: 102%;
+    height: 102%;
+    background-image: conic-gradient(from var(--angle),transparent 70%,rgb(241, 192, 126),rgb(241, 192, 126),rgb(241, 192, 126) );
+    top: 38%;
+    left: 50%;
+    translate: -50% -50%;
+    z-index: -1;
+    padding: 6px ;
+    padding-bottom: 1%;
+    animation: 3s spin linear infinite;
+    
+}
+
+.card::before{
+    filter: blur(1.5rem);
+    opacity: -0.2;
+}
+    @keyframes spin {
+        from{
+            --angle:0deg;
+        }
+        to{
+            --angle:360deg;
+        }
+    }
+
+table.list{
+    text-align: center;
+    width: 100%;
+    
+}
+
+td{
+    
+    border: 1px solid rgb(0, 0, 0);
+    text-align: left;
+    padding: 8px 15px;
+}
+
+tr:nth-child(even), table.list thread> tr{
+    background-color: rgb(241, 192, 126);
+}
+
+input[type="text"],input[type="number"]{
+    width:91%;
+    padding:12px 20px;
+    margin:8px 0;
+    display: inline-block;
+    border: 1px solid  rgb(241, 192, 126);
+    border-radius: 4px;
+
+}
+
+
+
+.select{
+    width:91%;
+    padding:12px 20px;
+    margin:8px 0;
+    display: inline-block;
+    border: 1px solid rgb(165,161,161);
+    border-radius: 4px;
+}
+
+input[type="submit"],input[type="reset"]{
+    background: #eee;
+    padding:6px 12px;
+    margin:15px 0 10px;
+    display: inline-block;
+    border-color: black;
+    border-radius: 30px;
+    font-size: 1rem;
+    cursor: pointer;
+   
+}
+
+
+
+
+input[type="submit"]:hover{
+    
+    background: #4b99d8;
+}
+
+input[type="reset"]:hover{
+    background: #4b99d8;
+}
+
+button{
+    background: #eee;
+    padding:6px 12px;
+    margin:15px 0 10px;
+    display: inline-block;
+    border: none;
+    border-radius: 30px;
+    font-size: 1rem;
+    cursor: pointer;
+    outline: none;
+}
+
+button:hover{
+
+    background:#4b99d8 ;
+}
+
+
+.footer{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color:blur(20px);  
+    color: white;
+    text-align: center;
+}

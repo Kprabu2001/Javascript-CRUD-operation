@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<head>
+    <title>Crud Operation</title>
+    <link type="text/css" rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <table class="card">
+        <tr>
+            <td>
+                <form autocomplete="off" onsubmit="onFormSubmit()">
+                    <div>
+                        <label for="Name"><b>Name</b></label>
+                        <input type="text" name="Name" id="Name" placeholder="Enter your name" required>
+                    </div>
+                    <div>
+                        <label for="Age"><b>Age</b></label>
+                        <input type="text" name="Age" id="Age" placeholder="Enter your age" required>
+                    </div>
+                    <div>
+                        <label for="Gender"><b>Gender</b></label>
+                        <select class="select" id="Gender" >
+                            <option>Male</option>
+                            <option>Female</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="Course"><b>Course</b></label>
+                        <select class="select" id="Course">
+                            <option>javascript</option>
+                            <option>java</option>
+                            <option>HTML</option>
+                            <option>PHP</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="Email"><b>E-mail</b></label>
+                        <input type="text" name="Email" id="Email" placeholder="Enter your Email">
+
+                    </div>
+
+                    <div class="form_action--button">
+                        <input type="submit" value="Submit">
+                        <input type="reset" value="Reset">
+                    </div>
+                </form>
+
+                <td>
+                    <table class="list" id="Studentlist">
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>Age</th>
+                                <th>Gender</th>
+                                <th>Course</th>
+                                <th>E-mail</th>
+                                <TH>Action</TH>
+                              
+                            </tr>
+                        </thead>
+                        <tbody>
+
+                        </tbody>
+                    </table>
+                </td>
+            </td>
+        </tr>
+    </table>
+    <script type="text/javascript" src="./script.js"></script>
+</body>
+<div class="footer">
+
+
+ <h1 >Created by KDPrabu </h1>
+
+ 
+</div>
+</html>
